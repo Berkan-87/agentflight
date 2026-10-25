@@ -1,0 +1,65 @@
+{
+  "name": "@berkayyn/agentflight",
+  "version": "0.1.1",
+  "description": "Framework-agnostic flight recorder and observability layer for AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+  "access": "public"
+  },
+  "bin": {
+    "agentflight": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "observability",
+    "debugging",
+    "llm",
+    "tracing",
+    "openai",
+    "vercel-ai",
+    "flight-recorder"
+  ],
+  "author": "Adınız <email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kullanici/agentflight.git"
+  },
+  "homepage": "https://github.com/kullanici/agentflight#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "dotenv": "^18.0.8",
+    "typescript": "^5.4.0",
+    "vitest": "^3.2.7"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "peerDependencies": {
+    "ai": ">=4.0.0",
+    "@ai-sdk/openai": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    },
+    "@ai-sdk/openai": {
+      "optional": true
+    }
+  }
+}
+
